@@ -11,20 +11,22 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "LJ", "target-membership": [ "LJ" ] },
+    { "kind": "folder", "path": "Learning App", "target-membership": [ "Learning" ] },
     {
       "kind": "group",
       "name": "Products",
       "children": [
-        { "path": "<PRODUCTS>/LJ.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
+        { "path": "<PRODUCTS>/Learning.app", "id": "000000000000000000000120", "type": "wrapper.application", "index": false },
       ],
     },
+    { "kind": "folder", "path": "docs", "target-membership": [ "Learning" ] },
+    { "path": "README.md", "target-membership": [ "Learning/resources" ] },
   ],
   "targets": [
     {
-      "name": "LJ",
+      "name": "Learning",
       "id": "000000000000000100000000",
-      "product": "Products/LJ.app",
+      "product": "Products/Learning.app",
       "product-type": "application",
       "build-phases": [
         "compile-sources",
@@ -32,6 +34,8 @@
         "resources",
       ],
       "build-settings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "LJ_Icon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
         "ENABLE_APP_SANDBOX": "YES",
@@ -51,6 +55,7 @@
         "LD_RUNPATH_SEARCH_PATHS": "@executable_path/Frameworks",
         "LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]": "@executable_path/../Frameworks",
         "MARKETING_VERSION": "1.0",
+        "NEW_SETTING": "",
         "PRODUCT_BUNDLE_IDENTIFIER": "devplaceholder.$(PROJECT_UNIQUE_VALUE:identifier).$(PRODUCT_NAME:rfc1034identifier)",
         "PRODUCT_NAME": "$(TARGET_NAME)",
         "REGISTER_APP_GROUPS": "YES",
